@@ -6,6 +6,8 @@ import Data from './components/data';
 import Dashboard from './components/dashboard';
 import { database } from './firebase';
 import { ref, set, onValue } from 'firebase/database';
+import ReportsPage from './components/reports';
+
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Link to="/about" className="mx-2 text-black hover:underline">About</Link>
         <Link to="/data" className="mx-2 text-black hover:underline">Data</Link>
         <Link to="/dashboard" className="mx-2 text-black hover:underline">Dashboard</Link>
+        <Link to="/reports" className="mx-2 text-black hover:underline">Reports</Link>
+
       </nav>
     </header>
         <main className="p-4 space-y-6">
@@ -25,6 +29,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/data" element={<Data />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/reports" element={<ReportsPage />} />
+ 
           </Routes>
         </main>
       </div>

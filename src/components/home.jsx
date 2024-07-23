@@ -22,6 +22,9 @@ const Home = () => {
         >
           Go to Dashboard
         </Link>
+     <div className="mt-6 text-center text-gray-600 text-sm">
+          <p>Designed by <a href="https://harizcomel.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Hariz Comel</a></p>
+        </div>
       </div>
     </div>
   );
