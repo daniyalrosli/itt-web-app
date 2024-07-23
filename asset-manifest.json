@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/itt-web-app/static/css/main.23970798.css",
+    "main.js": "/itt-web-app/static/js/main.bb81b365.js",
+    "static/js/453.2632b27e.chunk.js": "/itt-web-app/static/js/453.2632b27e.chunk.js",
+    "index.html": "/itt-web-app/index.html",
+    "main.23970798.css.map": "/itt-web-app/static/css/main.23970798.css.map",
+    "main.bb81b365.js.map": "/itt-web-app/static/js/main.bb81b365.js.map",
+    "453.2632b27e.chunk.js.map": "/itt-web-app/static/js/453.2632b27e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23970798.css",
+    "static/js/main.bb81b365.js"
+  ]
+}
