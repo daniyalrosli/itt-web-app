@@ -48,11 +48,14 @@ const Status = () => {
     };
   }, []);
 
-  const latestTemp = tempData.length > 0 ? tempData[tempData.length - 1].value : 'N/A';
-  const latestForce = forceData.length > 0 ? forceData[forceData.length - 1].value : 'N/A';
+  const latestTemp = tempData.length > 0 ? parseFloat(tempData[tempData.length - 1].value) : 'N/A';
+  const latestForce = forceData.length > 0 ? parseFloat(forceData[forceData.length - 1].value) : 'N/A';
 
-  const status = latestTemp > 35 || latestForce > 20 ? 'danger' : 'normal';
-  const statusColor = status === 'danger' ? 'text-red-600' : 'text-green-600';
+  const tempStatus = latestTemp > 35 ? 'danger' : 'normal';
+  const forceStatus = latestForce > 20 ? 'danger' : 'normal';
+
+  const tempStatusColor = tempStatus === 'danger' ? 'text-red-600' : 'text-green-600';
+  const forceStatusColor = forceStatus === 'danger' ? 'text-red-600' : 'text-green-600';
 
   return (
     <div className="h-screen w-full p-6 bg-gray-100 flex flex-col items-center">
@@ -70,12 +73,12 @@ const Status = () => {
             <tr className="hover:bg-blue-100 transition-colors duration-200">
               <td className="p-4 text-gray-700">Temperature</td>
               <td className="p-4 text-gray-700">{latestTemp}</td>
-              <td className={`p-4 font-semibold ${statusColor}`}>{status}</td>
+              <td className={`p-4 font-semibold ${tempStatusColor}`}>{tempStatus}</td>
             </tr>
             <tr className="hover:bg-blue-100 transition-colors duration-200">
               <td className="p-4 text-gray-700">Force</td>
               <td className="p-4 text-gray-700">{latestForce}</td>
-              <td className={`p-4 font-semibold ${statusColor}`}>{status}</td>
+              <td className={`p-4 font-semibold ${forceStatusColor}`}>{forceStatus}</td>
             </tr>
           </tbody>
         </table>
