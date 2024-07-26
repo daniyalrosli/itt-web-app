@@ -48,15 +48,15 @@ const Reports = () => {
 
   return (
     <div className="h-screen w-full p-6 bg-gray-100 flex flex-col items-center">
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-blue-600 mb-6">Athlete Health Monitoring Reports</h1>
+      <div className="w-full max-w-5xl bg-white rounded-lg shadow-lg p-8">
+        <h1 className="text-3xl font-bold text-blue-600 mb-6 text-center">Athlete Health Monitoring Reports</h1>
         
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 mb-6 text-center">
           The following reports provide insights into the health and performance of athletes based on real-time data collected through various sensors. Visualizations are provided for Force and Temperature metrics to help in analyzing trends and making informed decisions.
         </p>
 
-        <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4">Metrics Visualization</h2>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center">Metrics Visualization</h2>
           <Line
             data={chartData}
             options={{
@@ -78,7 +78,8 @@ const Reports = () => {
               },
               plugins: {
                 legend: {
-                  display: true
+                  display: true,
+                  position: 'top'
                 }
               }
             }}
@@ -86,7 +87,7 @@ const Reports = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4">Detailed Metrics Table</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center">Detailed Metrics Table</h2>
           <table className="min-w-full bg-white divide-y divide-gray-200">
             <thead>
               <tr className="bg-blue-50">

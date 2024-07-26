@@ -7,6 +7,7 @@ import Dashboard from './components/dashboard';
 import { database } from './firebase';
 import { ref, set, onValue } from 'firebase/database';
 import ReportsPage from './components/reports';
+import Status from './components/status';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Link to="/data" className="mx-2 text-black hover:underline">Data</Link>
         <Link to="/dashboard" className="mx-2 text-black hover:underline">Dashboard</Link>
         <Link to="/reports" className="mx-2 text-black hover:underline">Reports</Link>
-
+        <Link to ="/status" className="mx-2 text-black hover:underline">Status</Link>
       </nav>
     </header>
         <main className="p-4 space-y-6">
@@ -30,6 +31,8 @@ function App() {
             <Route path="/data" element={<Data />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<ReportsPage />} />
+            <Route path="/status" element={<Status/>} />
+ 
  
           </Routes>
         </main>
